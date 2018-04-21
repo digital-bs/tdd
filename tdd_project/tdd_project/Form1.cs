@@ -16,7 +16,7 @@ namespace tdd_project
         {
             InitializeComponent();
         }
-
+        GameHandler game;
         public void enterNamesVisible(bool visible)
         {
             textBoxName1.Visible = visible;
@@ -26,14 +26,37 @@ namespace tdd_project
             labelNames.Visible = visible;
             buttonStart.Visible = visible;
             buttonStartForm.Visible = !visible;
+            buttonEnter.Visible = !visible;
+            labelNamePlayer1.Visible = !visible;
+            labelNamePlayer2.Visible = !visible;
+            labelPointsPlayer1.Visible = !visible;
+            labelPointsPlayer2.Visible = !visible;
+            labelWhoseMove.Visible = !visible;
+            textBoxActualCity.Visible = !visible;
+            textBoxNewCity.Visible = !visible;
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrWhiteSpace(textBoxName1.Text) || String.IsNullOrWhiteSpace(textBoxName2.Text))
+                return;                
             enterNamesVisible(false);
+            game = new GameHandler(textBoxName1.Text, textBoxName2.Text);
+            labelNamePlayer1.Text = textBoxName1.Text;
+            labelNamePlayer2.Text = textBoxName2.Text;
         }
 
         private void buttonStartForm_Click(object sender, EventArgs e)
+        {
+            enterNamesVisible(true);
+        }
+
+        private void buttonEnter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
             enterNamesVisible(true);
         }
