@@ -74,5 +74,12 @@ namespace UnitTestTDD
 
             Assert.IsNotNull(gameHandler.oldCities);
         }
+        [TestMethod]
+        public void TestListNewCities()
+        {
+            GameHandler gameHandler = new GameHandler("", "");
+
+            Assert.IsNotNull(gameHandler.newCities);
+        }
     }
 }
