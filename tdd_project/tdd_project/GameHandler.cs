@@ -54,8 +54,14 @@ namespace tdd_project
         }
         public void setNewCitiesListFromCSV(String filename)
         {
-            newCities.Add("");
-            newCities.Add("Новоалтайск");
+            using (var reader = new StreamReader(filename))
+            {
+                while (!reader.EndOfStream)
+                {
+                    String line = reader.ReadLine();
+                    newCities.Add(line);
+                }
+            }
         }
 
     }
