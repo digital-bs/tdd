@@ -35,5 +35,11 @@ namespace UnitTestTDD
             int points = player.getPoints();
             Assert.AreEqual(points, 0);
         }
+        [TestMethod]
+        public void TestGameConstructorWithNames()
+        {
+            GameHandler gameHandler = new GameHandler("","");
+            Assert.IsNotNull(gameHandler);
+        }
     }
 }

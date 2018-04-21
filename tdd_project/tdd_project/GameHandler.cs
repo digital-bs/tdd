@@ -8,11 +8,13 @@ namespace tdd_project
 {
     public class GameHandler
     {
-        Player player1, player2;
+        private Player player1, player2;
+        private String actualCity;
+        private String newCity;
         public GameHandler()
         {
-            player1 = new Player();
-            player2 = new Player();
+
         }
+        
     }
 }

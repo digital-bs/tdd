@@ -27,5 +27,9 @@ namespace tdd_project
         {
             return points;
         }
+        public void setPoints(int newPoints)
+        {
+            points = newPoints;
+        }
     }
 }
