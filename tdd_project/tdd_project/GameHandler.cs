@@ -43,6 +43,10 @@ namespace tdd_project
         {
             return oldCities;
         }
+        public List<String> get_newCities()
+        {
+            return oldCities;
+        }
 
     }
 }
