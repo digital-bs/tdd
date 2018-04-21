@@ -19,5 +19,13 @@ namespace UnitTestTDD
             Player player = new Player();
             Assert.IsNotNull(player);
         }
+        [TestMethod]
+        public void TestPlayerCreateWithName()
+        {
+            string name;
+            Player player = new Player("програмуктер");
+            name = player.getName();
+            Assert.Equals(name, "програмуктер")
+        }
     }
 }
