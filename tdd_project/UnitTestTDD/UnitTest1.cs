@@ -101,6 +101,13 @@ namespace UnitTestTDD
             var expected = gameHandler.getLastLetter("Новоалтацк");
             Assert.AreEqual("к", expected);
         }
+        [TestMethod]
+        public void TestIfNewCitySuitable()
+        {
+            GameHandler gameHandler = new GameHandler("", "");
+            bool expected = gameHandler.ifNewCitySuitable("Барнаул", "Львив");
+            Assert.AreEqual(true, expected);
+        }
 
 
     }
