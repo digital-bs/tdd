@@ -9,9 +9,10 @@ namespace tdd_project
     public class Player
     {
         private String name;
+        
         public Player()
         {
-
+            
         }
         public Player(String name)
         {

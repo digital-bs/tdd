@@ -27,5 +27,13 @@ namespace UnitTestTDD
             name = player.getName();
             Assert.AreEqual(name, "програмуктер");
         }
+        
+        [TestMethod]
+        public void TestPlayerPoints()
+        {
+            Player player = new Player("програмуктер");
+            int points = player.getPoints();
+            Assert.AreEqual(points, 0);
+        }
     }
 }
