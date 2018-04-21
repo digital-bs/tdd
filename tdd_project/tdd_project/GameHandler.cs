@@ -73,5 +73,9 @@ namespace tdd_project
             var lastLetter = cityName[cityName.Length - 1];
             return lastLetter.ToString();
         }
+        public bool ifNewCitySuitable(String oldCity, String newCity)
+        {
+            return true;
+        }
     }
 }
