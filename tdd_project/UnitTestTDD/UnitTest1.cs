@@ -94,6 +94,13 @@ namespace UnitTestTDD
             var expected = gameHandler.getFirstLetter("Новоалтацк");
             Assert.AreEqual("Н", expected);
         }
+        [TestMethod]
+        public void TestGetterLastLetter()
+        {
+            GameHandler gameHandler = new GameHandler("", "");
+            var expected = gameHandler.getLastLetter("Новоалтацк");
+            Assert.AreEqual("к", expected);
+        }
 
 
     }
