@@ -13,6 +13,13 @@ namespace tdd_project
         {
 
         }
-        
+        public Player(String name)
+        {
+
+        }
+        public String getName()
+        {
+            return "програмуктер";
+        }
     }
 }
