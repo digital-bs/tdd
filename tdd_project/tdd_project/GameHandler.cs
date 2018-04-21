@@ -68,5 +68,10 @@ namespace tdd_project
             var firstLetter = cityName[0];
             return firstLetter.ToString();
         }
+        public string getLastLetter(String cityName)
+        {
+            var lastLetter = cityName[cityName.Length - 1];
+            return lastLetter.ToString();
+        }
     }
 }
