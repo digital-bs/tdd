@@ -82,7 +82,15 @@ namespace tdd_project
         }
         public bool ifNewCityFromNewCitiesList(String newCity)
         {
-            return true;
+            foreach (var city in newCities)
+            {
+                if (city.ToLower() == newCity.ToLower())
+                {
+                    newCities.Remove(city);
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
