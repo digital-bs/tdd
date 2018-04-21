@@ -20,7 +20,10 @@ namespace tdd_project
             player1 = new Player(name1);
             player2 = new Player(name2);
         }
-        
-        
+        public String get_actualCity()
+        {
+            return "";
+        }
+
     }
 }
