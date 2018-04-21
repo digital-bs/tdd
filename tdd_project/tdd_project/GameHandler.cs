@@ -75,7 +75,10 @@ namespace tdd_project
         }
         public bool ifNewCitySuitable(String oldCity, String newCity)
         {
-            return true;
+            if (getLastLetter(oldCity).ToLower() == getFirstLetter(newCity).ToLower())
+                return true;
+            else
+                return false;
         }
     }
 }
