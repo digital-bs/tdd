@@ -13,5 +13,11 @@ namespace UnitTestTDD
             GameHandler gameHandler = new GameHandler();
             Assert.IsNotNull(gameHandler);
         }
+        [TestMethod]
+        public void TestPlayerCreate()
+        {
+            Player player = new Player();
+            Assert.IsNotNull(player);
+        }
     }
 }
