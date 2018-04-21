@@ -28,6 +28,10 @@ namespace tdd_project
         {
             return newCity;
         }
+        public void set_actualCity(String actCity)
+        {
+            this.actualCity = actCity;
+        }
 
     }
 }
