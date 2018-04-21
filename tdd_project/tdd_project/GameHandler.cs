@@ -73,12 +73,13 @@ namespace tdd_project
             var lastLetter = cityName[cityName.Length - 1];
             return lastLetter.ToString();
         }
-        public bool ifNewCitySuitable(String oldCity, String newCity)
+        public bool ifNewCitySuitableInLetters(String oldCity, String newCity)
         {
             if (getLastLetter(oldCity).ToLower() == getFirstLetter(newCity).ToLower())
                 return true;
             else
                 return false;
         }
+        
     }
 }

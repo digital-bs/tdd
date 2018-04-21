@@ -105,8 +105,16 @@ namespace UnitTestTDD
         public void TestIfNewCitySuitable()
         {
             GameHandler gameHandler = new GameHandler("", "");
-            bool expected = gameHandler.ifNewCitySuitable("Барнаул", "Львив");
+            bool expected = gameHandler.ifNewCitySuitableInLetters("Барнаул", "Львив");
             Assert.AreEqual(true, expected);
+        }
+        [TestMethod]
+        public void TestIfNewCityFromNewCitiesList()
+        {
+            GameHandler gameHandler = new GameHandler("", "");
+            gameHandler.loadGame();
+            bool ifIncluded = gameHandler.ifNewCityFromNewCitiesList("Барнаул");
+            Assert.AreEqual(true, ifIncluded);
         }
 
 
