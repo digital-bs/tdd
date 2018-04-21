@@ -80,6 +80,9 @@ namespace tdd_project
             else
                 return false;
         }
-        
+        public bool ifNewCityFromNewCitiesList(String newCity)
+        {
+            return true;
+        }
     }
 }
