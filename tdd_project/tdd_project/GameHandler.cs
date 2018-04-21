@@ -11,7 +11,7 @@ namespace tdd_project
         private Player player1, player2;
         private String actualCity;
         private String newCity;
-        public List<String> oldCities, newCities;
+        private List<String> oldCities, newCities;
         public GameHandler()
         {
 
@@ -39,6 +39,7 @@ namespace tdd_project
         {
             this.newCity = newCity;
         }
+        
 
     }
 }
