@@ -9,7 +9,7 @@ namespace tdd_project
     public class Player
     {
         private String name;
-        
+        private int points;
         public Player()
         {
             
@@ -21,6 +21,10 @@ namespace tdd_project
         public String getName()
         {
             return name;
+        }
+        public int getPoints()
+        {
+            return 0;
         }
     }
 }
