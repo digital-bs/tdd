@@ -22,7 +22,7 @@ namespace tdd_project
         }
         public String get_actualCity()
         {
-            return "";
+            return actualCity;
         }
         public String get_newCity()
         {
