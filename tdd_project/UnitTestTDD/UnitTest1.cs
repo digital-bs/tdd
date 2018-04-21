@@ -67,6 +67,12 @@ namespace UnitTestTDD
             gameHandler.set_newCity("city");
             Assert.AreEqual("city", gameHandler.get_newCity());
         }
+        [TestMethod]
+        public void TestListOldCities()
+        {
+            GameHandler gameHandler = new GameHandler("", "");
 
+            Assert.IsNotNull(gameHandler.oldCities);
+        }
     }
 }
