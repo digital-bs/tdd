@@ -25,7 +25,7 @@ namespace UnitTestTDD
             string name;
             Player player = new Player("програмуктер");
             name = player.getName();
-            Assert.Equals(name, "програмуктер");
+            Assert.AreEqual(name, "програмуктер");
         }
     }
 }
