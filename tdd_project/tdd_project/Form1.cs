@@ -16,5 +16,26 @@ namespace tdd_project
         {
             InitializeComponent();
         }
+
+        public void enterNamesVisible(bool visible)
+        {
+            textBoxName1.Visible = visible;
+            textBoxName2.Visible = visible;
+            labelName1.Visible = visible;
+            labelName2.Visible = visible;
+            labelNames.Visible = visible;
+            buttonStart.Visible = visible;
+            buttonStartForm.Visible = !visible;
+        }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            enterNamesVisible(false);
+        }
+
+        private void buttonStartForm_Click(object sender, EventArgs e)
+        {
+            enterNamesVisible(true);
+        }
     }
 }
