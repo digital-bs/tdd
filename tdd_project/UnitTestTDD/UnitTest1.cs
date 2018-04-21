@@ -9,6 +9,8 @@ namespace UnitTestTDD
         [TestMethod]
         public void TestMethod1()
         {
+            GameHandler gameHandler = new GameHandler();
+            Assert.IsNotNull(gameHandler);
         }
     }
 }
