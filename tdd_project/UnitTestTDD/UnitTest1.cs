@@ -22,8 +22,8 @@ namespace UnitTestTDD
         [TestMethod]
         public void TestPlayerCreateWithName()
         {
-            string name;
             Player player = new Player("програмуктер");
+            string name;
             name = player.getName();
             Assert.AreEqual(name, "програмуктер");
         }
