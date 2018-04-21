@@ -11,6 +11,7 @@ namespace tdd_project
         private Player player1, player2;
         private String actualCity;
         private String newCity;
+        public List<String> oldCities;
         public GameHandler()
         {
 
@@ -19,6 +20,7 @@ namespace tdd_project
         {
             player1 = new Player(name1);
             player2 = new Player(name2);
+            oldCities = new List<string>();
         }
         public String get_actualCity()
         {
