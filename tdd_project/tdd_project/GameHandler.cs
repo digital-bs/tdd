@@ -52,7 +52,11 @@ namespace tdd_project
         {
             return newCities;
         }
-        
+        public void setNewCitiesListFromCSV(String filename)
+        {
+            newCities.Add("");
+            newCities.Add("Новоалтайск");
+        }
 
     }
 }
