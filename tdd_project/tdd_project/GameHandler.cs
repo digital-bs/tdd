@@ -39,7 +39,10 @@ namespace tdd_project
         {
             this.newCity = newCity;
         }
-        
+        public List<String> get_oldCities()
+        {
+            return oldCities;
+        }
 
     }
 }
