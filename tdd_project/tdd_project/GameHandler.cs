@@ -15,6 +15,10 @@ namespace tdd_project
         {
 
         }
-        
+        public GameHandler(String name1, String name2)
+        {
+            player1 = new Player(name1);
+            player2 = new Player(name2);
+        }
     }
 }
