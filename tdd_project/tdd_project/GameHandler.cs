@@ -24,7 +24,10 @@ namespace tdd_project
         {
             return "";
         }
-        
+        public String get_newCity()
+        {
+            return "";
+        }
 
     }
 }
