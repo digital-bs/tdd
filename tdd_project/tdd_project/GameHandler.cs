@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,12 @@ namespace tdd_project
         {
             player1 = new Player(name1);
             player2 = new Player(name2);
-            oldCities = new List<string>();
             newCities = new List<string>();
+            oldCities = new List<string>();
+        }
+        public void loadGame()
+        {
+            setNewCitiesListFromCSV("cities.csv");
         }
         public String get_actualCity()
         {
@@ -45,8 +50,9 @@ namespace tdd_project
         }
         public List<String> get_newCities()
         {
-            return oldCities;
+            return newCities;
         }
+        
 
     }
 }

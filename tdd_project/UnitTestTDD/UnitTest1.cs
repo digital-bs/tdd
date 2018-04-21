@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using tdd_project;
+using System.Collections.Generic;
 
 namespace UnitTestTDD
 {
@@ -78,6 +79,13 @@ namespace UnitTestTDD
         {
             GameHandler gameHandler = new GameHandler("", "");
             Assert.IsNotNull(gameHandler.get_newCities());
+        }
+        [TestMethod]
+        public void TestSetterNewCitiesListFromCSV()
+        {
+            GameHandler gameHandler = new GameHandler("", "");
+            gameHandler.loadGame();
+            Assert.AreEqual("Новоалтайск", gameHandler.get_newCities()[1]);
         }
 
     }
