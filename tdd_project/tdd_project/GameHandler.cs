@@ -76,6 +76,8 @@ namespace tdd_project
         public string getLastLetter(String cityName)
         {
             var lastLetter = cityName[cityName.Length - 1];
+            if (lastLetter == 'ь')
+                lastLetter = cityName[cityName.Length - 2];
             return lastLetter.ToString();
         }
         public bool ifNewCitySuitableInLetters(String oldCity, String newCity)
