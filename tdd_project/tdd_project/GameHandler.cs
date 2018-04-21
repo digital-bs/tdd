@@ -26,7 +26,7 @@ namespace tdd_project
         }
         public String get_newCity()
         {
-            return "";
+            return newCity;
         }
 
     }
