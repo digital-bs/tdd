@@ -32,6 +32,10 @@ namespace tdd_project
         {
             this.actualCity = actCity;
         }
+        public void set_newCity(String newCity)
+        {
+            this.newCity = newCity;
+        }
 
     }
 }
