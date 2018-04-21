@@ -4,15 +4,18 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace tdd_project
 {
     public class GameHandler
     {
-        private Player player1, player2;
+        public Player player1, player2;
         private String actualCity;
         private String newCity;
         private List<String> oldCities, newCities;
+        public bool numberOfPlayer;
         public GameHandler()
         {
 
@@ -23,10 +26,12 @@ namespace tdd_project
             player2 = new Player(name2);
             newCities = new List<string>();
             oldCities = new List<string>();
+            numberOfPlayer = true;
         }
         public void loadGame()
         {
             setNewCitiesListFromCSV("cities.csv");
+            startActualCity();
         }
         public String get_actualCity()
         {
@@ -92,5 +97,40 @@ namespace tdd_project
             }
             return false;
         }
+        public void startActualCity()
+        {
+            Random random = new Random();
+            int num = random.Next(0, newCities.Count);
+            actualCity = newCities[num];
+            newCities.Remove(actualCity);
+        }
+        public void enterCity(String nCity)
+        {
+            set_newCity(nCity);
+            if (ifNewCitySuitableInLetters(get_actualCity(), get_newCity()))
+            {
+                if (ifNewCityFromNewCitiesList(get_newCity()))
+                {
+                    if (numberOfPlayer)
+                        player1.setPoints(player1.getPoints() + newCity.Length);
+                    else
+                        player2.setPoints(player2.getPoints() + newCity.Length);
+
+                    numberOfPlayer = !numberOfPlayer;
+                    actualCity = newCity;
+                }
+                else
+                {
+                    MessageBox.Show("Данный город либо уже был, либо его нет в базе.");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Первая и последняя буквы не совпали.");
+                return;
+            }
+        }
+
     }
 }

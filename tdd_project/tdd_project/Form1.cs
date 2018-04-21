@@ -44,6 +44,8 @@ namespace tdd_project
             game = new GameHandler(textBoxName1.Text, textBoxName2.Text);
             labelNamePlayer1.Text = textBoxName1.Text;
             labelNamePlayer2.Text = textBoxName2.Text;
+            game.loadGame();
+            textBoxActualCity.Text = game.get_actualCity();
         }
 
         private void buttonStartForm_Click(object sender, EventArgs e)
@@ -53,12 +55,25 @@ namespace tdd_project
 
         private void buttonEnter_Click(object sender, EventArgs e)
         {
-
+            game.enterCity(textBoxNewCity.Text);
+            textBoxActualCity.Text = game.get_actualCity();
+            textBoxNewCity.Text = "";
+            labelPointsPlayer1.Text = "Очков : " + game.player1.getPoints();
+            labelPointsPlayer2.Text = "Очков : " + game.player2.getPoints();
+            if (game.numberOfPlayer)
+                labelWhoseMove.Text = "Ходит игрок 1";
+            else
+                labelWhoseMove.Text = "Ходит игрок 2";
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             enterNamesVisible(true);
+        }
+
+        private void textBoxNewCity_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -121,6 +121,7 @@
             this.textBoxNewCity.Name = "textBoxNewCity";
             this.textBoxNewCity.Size = new System.Drawing.Size(100, 22);
             this.textBoxNewCity.TabIndex = 6;
+            this.textBoxNewCity.Enter += new System.EventHandler(this.textBoxNewCity_Enter);
             // 
             // buttonEnter
             // 
