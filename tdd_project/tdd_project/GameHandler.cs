@@ -63,10 +63,10 @@ namespace tdd_project
                 }
             }
         }
-        public char getFirstLetter(String cityName)
+        public string getFirstLetter(String cityName)
         {
-            var firstLetter = cityName.First();
-            return firstLetter;
+            var firstLetter = cityName[0];
+            return firstLetter.ToString();
         }
     }
 }

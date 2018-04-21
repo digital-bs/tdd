@@ -92,7 +92,7 @@ namespace UnitTestTDD
         {
             GameHandler gameHandler = new GameHandler("", "");
             var expected = gameHandler.getFirstLetter("Новоалтацк");
-            Assert.AreEqual('Н', expected);
+            Assert.AreEqual("Н", expected);
         }
 
 
