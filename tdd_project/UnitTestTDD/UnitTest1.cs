@@ -87,6 +87,14 @@ namespace UnitTestTDD
             gameHandler.loadGame();
             Assert.AreEqual("Новоалтайск", gameHandler.get_newCities()[1]);
         }
+        [TestMethod]
+        public void TestGetterFirstLetter()
+        {
+            GameHandler gameHandler = new GameHandler("", "");
+            var expected = gameHandler.getFirstLetter("Новоалтацк");
+            Assert.AreEqual('Н', expected);
+        }
+
 
     }
 }
