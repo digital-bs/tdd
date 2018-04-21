@@ -12,11 +12,12 @@ namespace tdd_project
         private int points;
         public Player()
         {
-            
+            this.points = 0;
         }
         public Player(String name)
         {
             this.name = name;
+            this.points = 0;
         }
         public String getName()
         {
@@ -24,7 +25,7 @@ namespace tdd_project
         }
         public int getPoints()
         {
-            return 0;
+            return points;
         }
     }
 }
