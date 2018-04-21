@@ -41,7 +41,7 @@ namespace UnitTestTDD
             GameHandler gameHandler = new GameHandler("","");
             Assert.IsNotNull(gameHandler);
         }
-        [TestMethod]
+        /*[TestMethod]
         public void TestForGetActualCity()
         {
             GameHandler gameHandler = new GameHandler("", "");
@@ -52,6 +52,14 @@ namespace UnitTestTDD
         {
             GameHandler gameHandler = new GameHandler("", "");
             Assert.AreEqual("", gameHandler.get_newCity());
+        }*/
+        [TestMethod]
+        public void TestForSetActualCity()
+        {
+            GameHandler gameHandler = new GameHandler("", "");
+            gameHandler.set_actualCity("city");
+            Assert.AreEqual("city", gameHandler.get_actualCity());
         }
+
     }
 }
