@@ -41,5 +41,11 @@ namespace UnitTestTDD
             GameHandler gameHandler = new GameHandler("","");
             Assert.IsNotNull(gameHandler);
         }
+        [TestMethod]
+        public void TestForGetActualWord()
+        {
+            GameHandler gameHandler = new GameHandler("", "");
+            Assert.AreEqual("", gameHandler.get_actualCity());
+        }
     }
 }
