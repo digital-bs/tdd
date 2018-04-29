@@ -52,6 +52,7 @@
             this.textBoxName1.Name = "textBoxName1";
             this.textBoxName1.Size = new System.Drawing.Size(100, 22);
             this.textBoxName1.TabIndex = 0;
+            this.textBoxName1.TextChanged += new System.EventHandler(this.textBoxName1_TextChanged);
             // 
             // textBoxName2
             // 
@@ -109,17 +110,17 @@
             // 
             // textBoxActualCity
             // 
-            this.textBoxActualCity.Location = new System.Drawing.Point(201, 83);
+            this.textBoxActualCity.Location = new System.Drawing.Point(151, 83);
             this.textBoxActualCity.Name = "textBoxActualCity";
             this.textBoxActualCity.ReadOnly = true;
-            this.textBoxActualCity.Size = new System.Drawing.Size(100, 22);
+            this.textBoxActualCity.Size = new System.Drawing.Size(150, 22);
             this.textBoxActualCity.TabIndex = 6;
             // 
             // textBoxNewCity
             // 
             this.textBoxNewCity.Location = new System.Drawing.Point(307, 83);
             this.textBoxNewCity.Name = "textBoxNewCity";
-            this.textBoxNewCity.Size = new System.Drawing.Size(100, 22);
+            this.textBoxNewCity.Size = new System.Drawing.Size(150, 22);
             this.textBoxNewCity.TabIndex = 6;
             this.textBoxNewCity.Enter += new System.EventHandler(this.textBoxNewCity_Enter);
             // 
@@ -165,18 +166,18 @@
             this.labelPointsPlayer1.AutoSize = true;
             this.labelPointsPlayer1.Location = new System.Drawing.Point(198, 58);
             this.labelPointsPlayer1.Name = "labelPointsPlayer1";
-            this.labelPointsPlayer1.Size = new System.Drawing.Size(61, 17);
+            this.labelPointsPlayer1.Size = new System.Drawing.Size(69, 17);
             this.labelPointsPlayer1.TabIndex = 3;
-            this.labelPointsPlayer1.Text = "Очков : ";
+            this.labelPointsPlayer1.Text = "Очков : 0";
             // 
             // labelPointsPlayer2
             // 
             this.labelPointsPlayer2.AutoSize = true;
             this.labelPointsPlayer2.Location = new System.Drawing.Point(304, 58);
             this.labelPointsPlayer2.Name = "labelPointsPlayer2";
-            this.labelPointsPlayer2.Size = new System.Drawing.Size(61, 17);
+            this.labelPointsPlayer2.Size = new System.Drawing.Size(69, 17);
             this.labelPointsPlayer2.TabIndex = 3;
-            this.labelPointsPlayer2.Text = "Очков : ";
+            this.labelPointsPlayer2.Text = "Очков : 0";
             // 
             // labelConsole
             // 

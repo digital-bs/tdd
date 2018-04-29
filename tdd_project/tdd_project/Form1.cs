@@ -75,5 +75,10 @@ namespace tdd_project
         {
 
         }
+
+        private void textBoxName1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
